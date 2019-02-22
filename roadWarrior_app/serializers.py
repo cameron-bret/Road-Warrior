@@ -1,6 +1,7 @@
 from rest_framework import serializers 
 from .models import RV
 from .models import Post
+from .models import Comment
 
 class RVSerializer(serializers.ModelSerializer):
     # ingredients = IngredientSerializer(many=True, read_only=True)
@@ -13,3 +14,9 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ('rv', 'post_image', 'title', 'description')
+
+class CommentSerializer(serializers.ModelSerializer):
+    # ingredients = IngredientSerializer(many=True, read_only=True)
+    class Meta:
+        model = Comment
+        fields = ("id", "postId", "date", "commentText", "commentVoteCount")

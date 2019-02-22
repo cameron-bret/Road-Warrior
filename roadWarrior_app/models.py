@@ -15,13 +15,22 @@ class RV(models.Model):
     image = models.TextField()
 
     def __str__(self):
-        return self.name
+        return self.vehicleName
 
 class Post(models.Model):
     rv = models.ForeignKey(RV, on_delete=models.CASCADE, related_name='posts')
-    post_image = models.TextField(default='IMAGE')
-    title = models.CharField(max_length=100, default='TITLE')
-    description = models.CharField(max_length=100, default='DESCRIPTION')
+    post_image = models.TextField(default='Image')
+    title = models.CharField(max_length=100, default='Title')
+    description = models.CharField(max_length=1000, default='Description')
 
     def __str__(self):
-        return self.name
+        return self.title
+
+class Comment(models.Model):
+    rvId = models.ForeignKey(
+        RV, on_delete=models.CASCADE, related_name="comments")
+    postId = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="comments")
+    date = models.DateTimeField(auto_now_add=True)
+    commentText = models.CharField(max_length=500)
+    commentVoteCount = models.IntegerField()
