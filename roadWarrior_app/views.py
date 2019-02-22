@@ -6,4 +6,4 @@ from django.http import HttpResponse
 
 	# Create your views here.
 def welcomeIndex(req):
-   	 return HttpResponse("ello!")
+   	 return HttpResponse("welcome")
