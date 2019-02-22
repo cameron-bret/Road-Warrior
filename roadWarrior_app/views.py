@@ -6,6 +6,6 @@ from rest_framework import viewsets
 from .models import RV
 from .serializers import RVSerializer
 
-class RVView(viewsets.ModelViewSet):
+class RVsView(viewsets.ModelViewSet):
     queryset = RV.objects.all()
     serializer_class = RVSerializer

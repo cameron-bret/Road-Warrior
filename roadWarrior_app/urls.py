@@ -7,6 +7,5 @@ router = routers.DefaultRouter()
 router.register('rvs', views.RVsView)
 
 urlpatterns = [
-    path('', views.welcomeIndex, name='welcome_index'),
     path('', include(router.urls))
 ]
