@@ -5,6 +5,8 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register('rvs', views.RVsView)
+router.register('posts', views.PostsView)
+router.register('comments', views.CommentsView)
 
 urlpatterns = [
     path('', include(router.urls))
