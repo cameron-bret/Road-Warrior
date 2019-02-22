@@ -19,3 +19,9 @@ class RV(models.Model):
 
 class Post(models.Model):
     rv = models.ForeignKey(RV, on_delete=models.CASCADE, related_name='posts')
+    post_image = models.TextField(default='IMAGE')
+    title = models.CharField(max_length=100, default='TITLE')
+    description = models.CharField(max_length=100, default='DESCRIPTION')
+
+    def __str__(self):
+        return self.name
