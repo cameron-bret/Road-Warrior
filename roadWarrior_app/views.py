@@ -2,8 +2,10 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets
+from .models import RV
+from .serializers import RVSerializer
 
-	# Create your views here.
-def welcomeIndex(req):
-   	 return HttpResponse("welcome")
+class RVView(viewsets.ModelViewSet):
+    queryset = RV.objects.all()
+    serializer_class = RVSerializer
