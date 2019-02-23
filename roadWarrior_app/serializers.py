@@ -13,10 +13,10 @@ class PostSerializer(serializers.ModelSerializer):
     # ingredients = IngredientSerializer(many=True, read_only=True)
     class Meta:
         model = Post
-        fields = ('rv', 'post_image', 'title', 'description')
+        fields = ('rv', 'post_image', 'title', 'description', 'date')
 
 class CommentSerializer(serializers.ModelSerializer):
     # ingredients = IngredientSerializer(many=True, read_only=True)
     class Meta:
         model = Comment
-        fields = ("id", "postId", "date", "commentText", "commentVoteCount")
+        fields = ("rvId", "postId", "commentDate", "commentText")

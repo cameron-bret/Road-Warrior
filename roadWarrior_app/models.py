@@ -22,15 +22,13 @@ class Post(models.Model):
     post_image = models.TextField(default='Image')
     title = models.CharField(max_length=100, default='Title')
     description = models.CharField(max_length=1000, default='Description')
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
 
 class Comment(models.Model):
-    rvId = models.ForeignKey(
-        RV, on_delete=models.CASCADE, related_name="comments")
-    postId = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name="comments")
-    date = models.DateTimeField(auto_now_add=True)
+    rvId = models.ForeignKey(RV, on_delete=models.CASCADE, related_name="comments")
+    postId = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    commentDate = models.DateTimeField(auto_now_add=True)
     commentText = models.CharField(max_length=500)
-    commentVoteCount = models.IntegerField()

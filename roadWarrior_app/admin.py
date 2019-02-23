@@ -11,7 +11,7 @@ class PostAdmin(admin.ModelAdmin):
         list_display = ('rv', 'post_image', 'title', 'description')
 
 class CommentAdmin(admin.ModelAdmin):
-        list_display = ("id", "postId", "date", "commentText", "commentVoteCount")
+        list_display = ("rvId", "postId", "commentDate", "commentText")
 
 admin.site.register(RV, RVAdmin)
 admin.site.register(Post, PostAdmin)
