@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers
+from roadWarrior_app import views 
+
+router = routers.DefaultRouter()
+router.register(r'rvs', views.RVsView, 'rv')
+router.register(r'posts', views.PostsView, 'post')
+router.register(r'comments', views.CommentsView, 'comment')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
     path('', include('roadWarrior_app.urls'))
 ]
