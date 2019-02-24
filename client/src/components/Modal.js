@@ -30,9 +30,19 @@ import React, { Component } from "react";
         const { toggle, onSave } = this.props;
         return (
           <Modal isOpen={true} toggle={toggle}>
-            <ModalHeader toggle={toggle}> Todo Item </ModalHeader>
+            <ModalHeader toggle={toggle}> New Post </ModalHeader>
             <ModalBody>
               <Form>
+                <FormGroup>
+                  <Label for="post_image">Image</Label>
+                  <Input
+                    type="text"
+                    name="post_image"
+                    value={this.state.activeItem.post_image}
+                    onChange={this.handleChange}
+                    placeholder="Image URL"
+                  />
+                </FormGroup>
                 <FormGroup>
                   <Label for="title">Title</Label>
                   <Input
@@ -40,7 +50,7 @@ import React, { Component } from "react";
                     name="title"
                     value={this.state.activeItem.title}
                     onChange={this.handleChange}
-                    placeholder="Enter Todo Title"
+                    placeholder="Title"
                   />
                 </FormGroup>
                 <FormGroup>
@@ -50,25 +60,24 @@ import React, { Component } from "react";
                     name="description"
                     value={this.state.activeItem.description}
                     onChange={this.handleChange}
-                    placeholder="Enter Todo description"
+                    placeholder="Description"
                   />
                 </FormGroup>
-                <FormGroup check>
-                  <Label for="completed">
-                    <Input
-                      type="checkbox"
-                      name="completed"
-                      checked={this.state.activeItem.completed}
-                      onChange={this.handleChange}
-                    />
-                    Completed
-                  </Label>
+                <FormGroup>
+                  <Label for="date">Date</Label>
+                  <Input
+                    type="date"
+                    name="date"
+                    value={this.state.activeItem.date}
+                    onChange={this.handleChange}
+                    placeholder="Date"
+                  />
                 </FormGroup>
               </Form>
             </ModalBody>
             <ModalFooter>
               <Button color="success" onClick={() => onSave(this.state.activeItem)}>
-                Save
+                Post
               </Button>
             </ModalFooter>
           </Modal>
