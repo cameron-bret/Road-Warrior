@@ -12,10 +12,11 @@ class SimpleMap extends Component {
         zoom: 11
     }
   render() {
+    const API_KEY = process.env.REACT_APP_MAP_API_KEY
     return (
         <div style = {{ height: '100vh', width: '100$'}}>
         <GoogleMapReact
-            bootstrapURLKeys={{ key: }}
+            apiKey={API_KEY}
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
         />

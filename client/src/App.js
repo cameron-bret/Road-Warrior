@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
 import axios from "axios";
+import SimpleMap from "./components/SimpleMap";
 
     class App extends Component {
       constructor(props) {
@@ -64,6 +65,9 @@ import axios from "axios";
                     <button onClick={this.createItem} className="btn btn-primary">
                       New Post
                     </button>
+                    <div>
+                      <SimpleMap/>
+                    </div>
                   </div>
                 </div>
               </div>
