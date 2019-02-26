@@ -8,8 +8,11 @@ import SimpleMap from "./components/SimpleMap";
         super(props);
         this.state = {
           activeItem: {
+            vehicleName: "",
+            post_image: "",
             title: "",
             description: "",
+            date: Date,
           },
           postList: []
         };
@@ -21,7 +24,7 @@ import SimpleMap from "./components/SimpleMap";
 
       refreshList = () => {
         axios
-          .get("http://localhost:8000/api/posts/")
+          .get("/api/posts/")
           .then(res => this.setState({ postList: res.data }))
           .catch(err => console.log(err));
       };
@@ -33,21 +36,21 @@ import SimpleMap from "./components/SimpleMap";
         this.toggle();
         if (item.id) {
           axios
-            .put(`http://localhost:8000/api/posts/${item.id}/`, item)
+            .put(`/api/posts/${item.id}/`, item)
             .then(res => this.refreshList());
           return;
         }
         axios
-          .post("http://localhost:8000/api/posts/", item)
+          .post("/api/posts/", item)
           .then(res => this.refreshList());
       };
       handleDelete = item => {
         axios
-          .delete(`http://localhost:8000/api/posts/${item.id}`)
+          .delete(`/api/posts/${item.id}`)
           .then(res => this.refreshList());
       };
       createItem = () => {
-        const item = { title: "", description: "" };
+        const item = { vehicleName: "", post_image:"", title: "", description: "", date: Date };
         this.setState({ activeItem: item, modal: !this.state.modal });
       };
       editItem = item => {

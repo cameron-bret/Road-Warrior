@@ -20,7 +20,7 @@ https://trello.com/b/3B3RgqMa/road-warrior
 
 **Below is a list of technologies/libraries/frameworks/dependencies and resources... think of this section as a citation of sources**
 
-Adobe XD, PostgresQL, Python, Django, React.js, styled-components, Bootstrap, axios, react-router-dom, npm, nodemon, Heroku, Github, react-google-maps-api, W3Schools, https://scotch.io/tutorials/build-a-to-do-application-using-django-and-react#toc-prerequisites, and classroom lessons.
+Adobe XD, PostgresQL, Python, Django, React.js, styled-components, Bootstrap, axios, react-router-dom, npm, nodemon, Heroku, Github, google-map-react, W3Schools, https://scotch.io/tutorials/build-a-to-do-application-using-django-and-react#toc-prerequisites, and classroom lessons.
 
 **Below is a list of goals for version 2**
 

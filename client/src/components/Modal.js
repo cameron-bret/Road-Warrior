@@ -33,6 +33,16 @@ import React, { Component } from "react";
             <ModalHeader toggle={toggle}> New Post </ModalHeader>
             <ModalBody>
               <Form>
+              <FormGroup>
+                  <Label for="vehicleName">Vehicle Name</Label>
+                  <Input
+                    type="text"
+                    name="vehicleName"
+                    value={this.state.activeItem.vehicleName}
+                    onChange={this.handleChange}
+                    placeholder="Vehicle Name"
+                  />
+                </FormGroup>
                 <FormGroup>
                   <Label for="post_image">Image</Label>
                   <Input
