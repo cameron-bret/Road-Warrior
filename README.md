@@ -14,9 +14,9 @@ https://trello.com/b/3B3RgqMa/road-warrior
 **Below is a link to the wireframe images**
 
 ![wireframe1](images/wireframe1.png)
-![wireframe2](images/Web 1920 – 2.png)
-![wireframe3](images/Web 1920 – 3.png)
-![wireframe4](images/Web 1920 – 4.png)
+![wireframe2](images/wireframe2.png)
+![wireframe3](images/wireframe3.png)
+![wireframe4](images/wireframe4.png)
 
 **Below is a list of technologies/libraries/frameworks/dependencies and resources... think of this section as a citation of sources**
 
