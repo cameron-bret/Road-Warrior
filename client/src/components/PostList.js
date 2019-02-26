@@ -59,6 +59,7 @@ import axios from "axios";
         return (
           <main className="content">
             <h1 className="text-white text-uppercase text-left my-4">Road Warrior</h1>
+            <button className="align-right">Menu</button>
             <br></br>
             <div className="row ">
               <div className="col-md-6 col-sm-10 mx-auto p-0">

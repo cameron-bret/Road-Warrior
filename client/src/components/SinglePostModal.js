@@ -65,12 +65,14 @@ import SimpleMap from "./SimpleMap";
               <div className="col-md-6 col-sm-10 mx-auto p-0">
                 <div className="card p-3">
                   <div className="">
-                    <button onClick={this.createItem} className="btn btn-primary">
-                      New Post
-                    </button>
                     <div>
                       <SimpleMap/>
                     </div>
+                    <br></br>
+                    <br></br>
+                    <button onClick={this.createItem} className="btn btn-primary">
+                      New Post
+                    </button>
                   </div>
                 </div>
               </div>
