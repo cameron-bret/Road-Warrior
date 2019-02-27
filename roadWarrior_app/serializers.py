@@ -9,13 +9,13 @@ class CommentSerializer(serializers.ModelSerializer):
         fields = ("vehicleName", "postId", "commentDate", "commentText")
 
 class PostSerializer(serializers.ModelSerializer):
-    comment = CommentSerializer(many=True, read_only=True)
+    comments = CommentSerializer(many=True, read_only=True)
     class Meta:
         model = Post
-        fields = ('comment', 'vehicleName', 'post_image', 'title', 'description', 'date')
+        fields = ('comments', 'vehicleName', 'post_image', 'title', 'description', 'date')
 
 class RVSerializer(serializers.ModelSerializer):
-    post = PostSerializer(many=True, read_only=True)
+    posts = PostSerializer(many=True, read_only=True)
     class Meta:
         model = RV
-        fields = ('post', 'username', 'password', 'vehicleName', 'make', 'model', 'year', 'rvClass', 'origin', 'image')
+        fields = ('posts', 'username', 'password', 'vehicleName', 'make', 'model', 'year', 'rvClass', 'origin', 'image')

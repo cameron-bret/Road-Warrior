@@ -42,6 +42,7 @@ const MenuNavStyle = styled.nav`
           .get("/api/posts/")
           .then(res => this.setState({ postList: res.data }))
           .catch(err => console.log(err));
+          // console.log(res.data)
       };
 
       toggle = () => {
@@ -97,6 +98,13 @@ const MenuNavStyle = styled.nav`
                     <button onClick={this.createItem} className="btn btn-primary">
                       New Post
                     </button>
+                    <div>
+                      {this.state.postList.map((post, i) => (
+                        <div key ={i}>
+                          {post.title}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
