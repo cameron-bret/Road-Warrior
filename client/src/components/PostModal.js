@@ -24,7 +24,7 @@ const PostStyle = styled.div`
     margin: 0 auto;
 `
 
-    class SinglePostModal extends Component {
+    class PostModal extends Component {
       constructor(props) {
         super(props);
         this.state = {
@@ -112,12 +112,14 @@ const PostStyle = styled.div`
             <div>
                       {this.state.postList.map((post, i) => (
                         <div key ={i}>
-                          {post.comment}
                           {post.vehicleName}
                           {post.post_image}
                           {post.title}
                           {post.description}
                           {post.date}
+                          <button onClick={this.handleDelete} className="btn btn-primary">
+                      X
+                    </button>
                         </div>
                       ))}
                     </div>
@@ -133,4 +135,4 @@ const PostStyle = styled.div`
         );
       }
     }
-    export default SinglePostModal;
+    export default PostModal;
