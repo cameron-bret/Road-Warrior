@@ -3,6 +3,20 @@ import Modal from "./Modal";
 import { Link } from 'react-router-dom'
 import axios from "axios";
 import SimpleMap from "./SimpleMap";
+import styled from 'styled-components'
+
+const HomeNavStyle = styled.nav`
+    padding: 7px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 auto;
+`
+const MenuNavStyle = styled.nav`
+    padding: 5px;
+    display: inline-block;
+    margin: 0 auto;
+    position: absolute;right:0;top:10;
+`
 
     class SinglePostModal extends Component {
       constructor(props) {
@@ -60,13 +74,17 @@ import SimpleMap from "./SimpleMap";
       render() {
         return (
           <main className="content">
+          <HomeNavStyle>
             <Link to="/">
             <a href= '/'><h1 className="text-white text-uppercase text-left my-4">Road Warrior</h1></a>
             </Link>
+            </HomeNavStyle>
+            <MenuNavStyle>
             <Link to="/rvs">
-            <a href="https://imgur.com/4rcQIiY"><img src="https://i.imgur.com/4rcQIiY.png" alt="menu"/></a>
+            <a href="https://imgur.com/z9iCNBO"><img src="https://i.imgur.com/z9iCNBO.png" alt="menu"/></a>
             </Link>
             <br></br>
+            </MenuNavStyle>
             <div className="row ">
               <div className="col-md-6 col-sm-10 mx-auto p-0">
                 <div className="card p-3">
