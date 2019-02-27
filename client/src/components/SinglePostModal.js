@@ -60,9 +60,12 @@ import SimpleMap from "./SimpleMap";
       render() {
         return (
           <main className="content">
-            <h1 className="text-white text-uppercase text-left my-4">Road Warrior</h1>
+            <Link to="/">
+            <a href= '/'><h1 className="text-white text-uppercase text-left my-4">Road Warrior</h1></a>
+            </Link>
             <Link to="/rvs">
-            <a href="https://imgur.com/4rcQIiY"><img src="https://i.imgur.com/4rcQIiY.png" alt="menu"/></a>                </Link>
+            <a href="https://imgur.com/4rcQIiY"><img src="https://i.imgur.com/4rcQIiY.png" alt="menu"/></a>
+            </Link>
             <br></br>
             <div className="row ">
               <div className="col-md-6 col-sm-10 mx-auto p-0">
