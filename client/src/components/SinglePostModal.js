@@ -17,6 +17,12 @@ const MenuNavStyle = styled.nav`
     margin: 0 auto;
     position: absolute;right:0;top:10;
 `
+const PostStyle = styled.div`
+    color: white;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+`
 
     class SinglePostModal extends Component {
       constructor(props) {
@@ -98,17 +104,24 @@ const MenuNavStyle = styled.nav`
                     <button onClick={this.createItem} className="btn btn-primary">
                       New Post
                     </button>
-                    <div>
-                      {this.state.postList.map((post, i) => (
-                        <div key ={i}>
-                          {post.title}
-                        </div>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <PostStyle>
+            <div>
+                      {this.state.postList.map((post, i) => (
+                        <div key ={i}>
+                          {post.comment}
+                          {post.vehicleName}
+                          {post.post_image}
+                          {post.title}
+                          {post.description}
+                          {post.date}
+                        </div>
+                      ))}
+                    </div>
+                    </PostStyle>
             {this.state.modal ? (
               <Modal
                 activeItem={this.state.activeItem}
