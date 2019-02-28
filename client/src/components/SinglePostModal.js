@@ -101,9 +101,7 @@ const PostStyle = styled.div`
                     </div>
                     <br></br>
                     <br></br>
-                    <button onClick={this.createItem} className="btn btn-primary">
-                      New Post
-                    </button>
+                    <button onClick={this.createItem} className="btn btn-primary">New Post</button>
                   </div>
                 </div>
               </div>

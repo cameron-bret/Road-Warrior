@@ -81,9 +81,7 @@ const RVStyle = styled.div`
                   <div className="">
                     <br></br>
                     <br></br>
-                    <button onClick={this.createItem} className="btn btn-primary">
-                      New RV
-                    </button>
+                    <button onClick={this.createItem} className="btn btn-primary">New RV</button>
                   </div>
                 </div>
               </div>
@@ -93,10 +91,6 @@ const RVStyle = styled.div`
               {this.state.rvList.map((rv, i) => (
                 <div key ={i}>
                   {rv.vehicleName}
-                  {rv.post_image}
-                  {rv.title}
-                  {rv.description}
-                  {rv.date}
                   <button onClick= { () => this.handleDelete(rv.title)} className="btn btn-primary">X</button>
                   <br></br>
                   <button onClick= { () => this.editItem(rv.title)} className="btn btn-primary">Edit</button>
