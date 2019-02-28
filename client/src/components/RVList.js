@@ -8,13 +8,17 @@ import axios from "axios";
         super(props);
         this.state = {
           activeItem: {
+            username: "",
+            password: "",
             vehicleName: "",
-            post_image: "",
-            title: "",
-            description: "",
-            date: Date,
+            make: "",
+            model: "",
+            year: Number,
+            rvClass: "",
+            origin: "",
+            image: "",
           },
-          postList: []
+          rvList: []
         };
       }
 
@@ -24,8 +28,8 @@ import axios from "axios";
 
       refreshList = () => {
         axios
-          .get("/api/posts/")
-          .then(res => this.setState({ postList: res.data }))
+          .get("/api/rvs/")
+          .then(res => this.setState({ rvList: res.data }))
           .catch(err => console.log(err));
       };
 
@@ -36,21 +40,21 @@ import axios from "axios";
         this.toggle();
         if (item.id) {
           axios
-            .put(`/api/posts/${item.id}/`, item)
+            .put(`/api/rvs/${item.id}/`, item)
             .then(res => this.refreshList());
           return;
         }
         axios
-          .post("/api/posts/", item)
+          .post("/api/rvs/", item)
           .then(res => this.refreshList());
       };
       handleDelete = item => {
         axios
-          .delete(`/api/posts/${item.id}`)
+          .delete(`/api/rvs/${item.id}`)
           .then(res => this.refreshList());
       };
       createItem = () => {
-        const item = { vehicleName: "", post_image:"", title: "", description: "", date: Date };
+        const item = { username: "", password: "", vehicleName: "", make: "", model: "", year: Number, rvClass: "", origin: "", image:"" };
         this.setState({ activeItem: item, modal: !this.state.modal });
       };
       editItem = item => {
