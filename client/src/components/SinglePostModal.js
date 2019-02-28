@@ -110,21 +110,19 @@ const PostStyle = styled.div`
             </div>
             <PostStyle>
             <div>
-                      {this.state.postList.map((post, i) => (
-                        <div key ={i}>
-                          {post.comment}
-                          {post.vehicleName}
-                          {post.post_image}
-                          {post.title}
-                          {post.description}
-                          {post.date}
-                          <button onClick= { () => this.handleDelete(post.id)} className="btn btn-primary">
-                      X
-                    </button>
-                        </div>
-                      ))}
-                    </div>
-                    </PostStyle>
+              {this.state.postList.map((post, i) => (
+                <div key ={i}>
+                  {post.comment}
+                  {post.vehicleName}
+                  {post.post_image}
+                  {post.title}
+                  {post.description}
+                  {post.date}
+                  <button onClick= { () => this.handleDelete(post.title)} className="btn btn-primary">X</button>
+                </div>
+              ))}
+            </div>
+            </PostStyle>
             {this.state.modal ? (
               <Modal
                 activeItem={this.state.activeItem}

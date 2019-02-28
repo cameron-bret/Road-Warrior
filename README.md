@@ -20,23 +20,25 @@ https://trello.com/b/3B3RgqMa/road-warrior
 
 **Below is a list of technologies/libraries/frameworks/dependencies and resources... think of this section as a citation of sources**
 
-Adobe XD, PostgresQL, Python, Django, React.js, styled-components, Bootstrap, axios, react-router-dom, npm, nodemon, Heroku, Github, google-map-react, W3Schools, https://scotch.io/tutorials/build-a-to-do-application-using-django-and-react#toc-prerequisites, and classroom lessons.
+Adobe XD, PostgresQL, Python, Django, React.js, styled-components, Bootstrap, axios, react-router-dom,npm, nodemon, Heroku, Github, google-map-react, W3Schools, https://www.youtube.com/watch?v=GieYIzvdt2U, https://scotch.io/tutorials/build-a-to-do-application-using-django-and-react#toc-prerequisites, https://stackoverflow.com/questions/45913619/how-to-map-inside-a-map-function-in-reactjs, https://alligator.io/react/modal-component/, https://stackoverflow.com/questions/16610871/make-an-object-stick-to-the-top-right-side-of-the-page, https://github.com/heroku/heroku-buildpack-python/issues/704, and classroom lessons.
 
 **Below is a list of goals for version 2**
 
-- version 2 goal: 
-- version 2 goal: 
-- version 2 goal: 
+- version 2 goal: Add authentication for user login/sign up.
+- version 2 goal: Make the API calls so that when a post is created the location is stored on the map.
+- version 2 goal: Render the comments under each post so that users can interact with each other.
 
 **Special Thanks**
 
 - JB Watson
+- Jo Kim
 - William Njie
 - Daniel Mishael
 - Andrew McIntosh
 - Shomari Pope
 - Destin Floyd
 - Atarius Armstrong
+- Cameron Gunter
 - Noah Harvey
 
 for inspiration, motivation, and guidance along the way!
