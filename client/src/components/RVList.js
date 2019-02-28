@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import Modal from "./Modal";
 import { Link } from 'react-router-dom'
 import axios from "axios";
+import styled from 'styled-components'
+
+const RVStyle = styled.div`
+    color: white;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+`
 
     class RVList extends Component {
       constructor(props) {
@@ -80,6 +88,22 @@ import axios from "axios";
                 </div>
               </div>
             </div>
+            <RVStyle>
+            <div>
+              {this.state.rvList.map((rv, i) => (
+                <div key ={i}>
+                  {rv.vehicleName}
+                  {rv.post_image}
+                  {rv.title}
+                  {rv.description}
+                  {rv.date}
+                  <button onClick= { () => this.handleDelete(rv.title)} className="btn btn-primary">X</button>
+                  <br></br>
+                  <button onClick= { () => this.editItem(rv.title)} className="btn btn-primary">Edit</button>
+                </div>
+              ))}
+            </div>
+            </RVStyle>
             {this.state.modal ? (
               <Modal
                 activeItem={this.state.activeItem}
