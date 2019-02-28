@@ -15,4 +15,4 @@ create-react-app = "*"
 client = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6"
