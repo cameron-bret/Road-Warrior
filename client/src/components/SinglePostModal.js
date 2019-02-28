@@ -118,6 +118,9 @@ const PostStyle = styled.div`
                           {post.title}
                           {post.description}
                           {post.date}
+                          <button onClick= { () => this.handleDelete(post.id)} className="btn btn-primary">
+                      X
+                    </button>
                         </div>
                       ))}
                     </div>
