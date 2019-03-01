@@ -5,7 +5,7 @@ Road Warrior is a full stack web application for sharing your recreational vehic
 
 **Below is a link to the app itself**
 
-
+Dependency issues, was unable to deploy to Heroku.
 
 **Below is a link to the Trello Board**
 
